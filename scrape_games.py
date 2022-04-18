@@ -95,7 +95,7 @@ if __name__=='__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--dump-games', action='store_true', dest='dump_games')
     parser.add_argument('--scrape-manifest', action='store_true', dest='scrape_manifest')
-    parser.add_argument('--scrape-processes', action='store', dest='scrape_processes', default=30)
+    parser.add_argument('--scrape-processes', action='store', dest='scrape_processes', default=SCRAPE_PROCESSES)
     args = parser.parse_args()
     SCRAPE_PROCESSES = args.scrape_processes
     with open('dataset/raw_transcripts.json', 'r') as f:
